@@ -181,3 +181,47 @@ mysql> select *from addressBook;
 | kajal     | gadekar  | Ambegoan | Manchar | Pune       | 410502 |        9008 | kajal@gmail.com       |
 +-----------+----------+----------+---------+------------+--------+-------------+-----------------------+
 2 rows in set (0.00 sec)
+
+****UC-6****
+
+mysql> select *from addressBook;
++-----------+----------+----------+---------+------------+--------+-------------+-----------------------+
+| firstName | lastName | address  | city    | state      | zip    | phoneNumber | email                 |
++-----------+----------+----------+---------+------------+--------+-------------+-----------------------+
+| Seema     | Thorat   | Mumbai   | Khed    | Maharastra | 410501 |        7787 | Seemagade97@gmail.com |
+| kajal     | gadekar  | Ambegoan | Manchar | Pune       | 410502 |        9008 | kajal@gmail.com       |
++-----------+----------+----------+---------+------------+--------+-------------+-----------------------+
+2 rows in set (0.00 sec)
+
+mysql> select *from addressBook;
++-----------+----------+----------+---------+------------+--------+-------------+-----------------------+
+| firstName | lastName | address  | city    | state      | zip    | phoneNumber | email                 |
++-----------+----------+----------+---------+------------+--------+-------------+-----------------------+
+| Seema     | Thorat   | Mumbai   | Khed    | Maharastra | 410501 |        7787 | Seemagade97@gmail.com |
+| kajal     | gadekar  | Ambegoan | Manchar | Pune       | 410502 |        9008 | kajal@gmail.com       |
++-----------+----------+----------+---------+------------+--------+-------------+-----------------------+
+2 rows in set (0.00 sec)
+
+mysql> select firstName from addressBook where city = "Khed";
++-----------+
+| firstName |
++-----------+
+| Seema     |
++-----------+
+1 row in set (0.00 sec)
+
+mysql> select firstName, lastName from addressBook where city = "Khed";
++-----------+----------+
+| firstName | lastName |
++-----------+----------+
+| Seema     | Thorat   |
++-----------+----------+
+1 row in set (0.00 sec)
+
+mysql> select firstName, lastName, address, phoneNumber from addressBook where city = "Khed";
++-----------+----------+---------+-------------+
+| firstName | lastName | address | phoneNumber |
++-----------+----------+---------+-------------+
+| Seema     | Thorat   | Mumbai  |        7787 |
++-----------+----------+---------+-------------+
+1 row in set (0.00 sec)
