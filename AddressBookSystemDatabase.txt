@@ -110,3 +110,28 @@ mysql> select * from addressBook;
 | kajal     | gadekar  | Mumbai  | Manchar | Maharastra | 410502 |        9008 | kajal@gmail.com       |
 +-----------+----------+---------+---------+------------+--------+-------------+-----------------------+
 2 rows in set (0.00 sec)
+
+
+*****UC-4****
+
+mysql> select *from addressBook;
++-----------+----------+---------+---------+------------+--------+-------------+-----------------------+
+| firstName | lastName | address | city    | state      | zip    | phoneNumber | email                 |
++-----------+----------+---------+---------+------------+--------+-------------+-----------------------+
+| Seema     | Thorat   | Mumbai  | Khed    | Maharastra | 410501 |        7787 | Seemagade97@gmail.com |
+| kajal     | gadekar  | Mumbai  | Manchar | Maharastra | 410502 |        9008 | kajal@gmail.com       |
++-----------+----------+---------+---------+------------+--------+-------------+-----------------------+
+2 rows in set (0.00 sec)
+
+mysql> update addressBook set address = "Ambegoan" , state = "Pune" where firstName = "kajal";
+Query OK, 1 row affected (0.01 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> select * from addressBook;
++-----------+----------+----------+---------+------------+--------+-------------+-----------------------+
+| firstName | lastName | address  | city    | state      | zip    | phoneNumber | email                 |
++-----------+----------+----------+---------+------------+--------+-------------+-----------------------+
+| Seema     | Thorat   | Mumbai   | Khed    | Maharastra | 410501 |        7787 | Seemagade97@gmail.com |
+| kajal     | gadekar  | Ambegoan | Manchar | Pune       | 410502 |        9008 | kajal@gmail.com       |
++-----------+----------+----------+---------+------------+--------+-------------+-----------------------+
+2 rows in set (0.01 sec)
