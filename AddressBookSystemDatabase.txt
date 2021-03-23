@@ -68,3 +68,45 @@ mysql>  describe addressBook;
 | email       | varchar(50)  | YES  |     | NULL    |       |
 +-------------+--------------+------+-----+---------+-------+
 8 rows in set (0.02 sec)
+
+
+****UC-3****
+mysql> create table addressBook (firstName varchar(20), lastName varchar(20), address varchar(100), city varchar(20), state varchar(20), zip int, phoneNumber int, email varchar(50) );
+Query OK, 0 rows affected (0.11 sec)
+
+mysql>  describe addressBook;
++-------------+--------------+------+-----+---------+-------+
+| Field       | Type         | Null | Key | Default | Extra |
++-------------+--------------+------+-----+---------+-------+
+| firstName   | varchar(20)  | YES  |     | NULL    |       |
+| lastName    | varchar(20)  | YES  |     | NULL    |       |
+| address     | varchar(100) | YES  |     | NULL    |       |
+| city        | varchar(20)  | YES  |     | NULL    |       |
+| state       | varchar(20)  | YES  |     | NULL    |       |
+| zip         | int          | YES  |     | NULL    |       |
+| phoneNumber | int          | YES  |     | NULL    |       |
+| email       | varchar(50)  | YES  |     | NULL    |       |
++-------------+--------------+------+-----+---------+-------+
+8 rows in set (0.02 sec)
+mysql> insert into addressBook (firstName, lastName, address, city, state, zip, phoneNumber, email) values ("Seema", "Thorat", "Mumbai", "Khed", "Maharastra", 410501, 7787, "Seemagade97@gmail.com");
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select * from addressBook;
++-----------+----------+---------+------+------------+--------+-------------+-----------------------+
+| firstName | lastName | address | city | state      | zip    | phoneNumber | email                 |
++-----------+----------+---------+------+------------+--------+-------------+-----------------------+
+| Seema     | Thorat   | Mumbai  | Khed | Maharastra | 410501 |        7787 | Seemagade97@gmail.com |
++-----------+----------+---------+------+------------+--------+-------------+-----------------------+
+1 row in set (0.01 sec)
+
+mysql> insert into addressBook (firstName, lastName, address, city, state, zip, phoneNumber, email) values ("kajal", "gadekar", "Mumbai", "Manchar", "Maharastra", 410502, 9008, "kajal@gmail.com");
+Query OK, 1 row affected (0.02 sec)
+
+mysql> select * from addressBook;
++-----------+----------+---------+---------+------------+--------+-------------+-----------------------+
+| firstName | lastName | address | city    | state      | zip    | phoneNumber | email                 |
++-----------+----------+---------+---------+------------+--------+-------------+-----------------------+
+| Seema     | Thorat   | Mumbai  | Khed    | Maharastra | 410501 |        7787 | Seemagade97@gmail.com |
+| kajal     | gadekar  | Mumbai  | Manchar | Maharastra | 410502 |        9008 | kajal@gmail.com       |
++-----------+----------+---------+---------+------------+--------+-------------+-----------------------+
+2 rows in set (0.00 sec)
