@@ -225,3 +225,12 @@ mysql> select firstName, lastName, address, phoneNumber from addressBook where c
 | Seema     | Thorat   | Mumbai  |        7787 |
 +-----------+----------+---------+-------------+
 1 row in set (0.00 sec)
+
+***UC-7****
+mysql> select count(city), count(state) from addressBook;
++-------------+--------------+
+| count(city) | count(state) |
++-------------+--------------+
+|           2 |            2 |
++-------------+--------------+
+1 row in set (0.01 sec)
